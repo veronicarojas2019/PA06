@@ -16,8 +16,8 @@ def play_hangman():
     while (want_to_play):
         guessed_letters = []
         guesses_left = 6
-        word = "generate a random word"
-        letter = "ask the user for a letter"
+        word = generate_random_word()
+        letter = input("Enter a letter: ") "ask the user for a letter"
         done = False
         while not done:
             if letter in guessed_letters:
