@@ -2,10 +2,12 @@
    hangman_app.py is an app for playing hangman in the terminal
    it is also used as a module in the hangman_webapp flask app
 """
+import random
+words="These are some words that we can change later".split()
 
 def generate_random_word():
    """ read a list of words from a file and pick a random one to return """
-   return "unimplemented"
+   return "random.choice(words)
 
 def play_hangman():
     want_to_play = True
