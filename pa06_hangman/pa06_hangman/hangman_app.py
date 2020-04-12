@@ -14,29 +14,31 @@ def play_hangman():
 
 
     while (want_to_play):
-        guessed_letters = [] 
+        guessed_letters = []
         guesses_left = 6
         word = generate_random_word()
-        letter = input("Enter a letter: ") "ask the user for a letter"
+        letter = input("Enter a letter: ")
         done = False
         while not done:
             if letter in guessed_letters:
-                "subtract one from guesses_left"
-                "and tell them they already guessed that letter"
+                guesses_left=guesses_left-1
+                print("You already guessed that letter")
             elif letter not in word:
-                "add letter to guessed letters"
-                "tell user the letter is not in the word"
-                "subtract one from the guesses_left"
+                guessed_letters.append(letter)
+                print("The letter is not in the word")
+                guesses_left=guesses_left-1
             else:
-                "add letter to guessed letters"
-                "tell user the letter is in the word"
+                guessed_letters.append(letter)
+                print("The letter is in the word")
             if "all the letters in the word have been guessed":
-                "set done to be true and tell the user they won!"
-            elif "the number of guesses left is zero":
-                "set done to be true and tell the user they lost!"
+                done = True
+                print("Congratulations, you won!")
+            elif guesses_left=0:
+                done = True
+                print("Sorry, you lost!")
             else:
                 "print the word with a dash for each letter not in guessed_letters"
-                letter = "ask the user for another letter"
+                letter = input("Enter a letter: ")
         want_to_play = "ask the user if they want to play another game..."
 
 
