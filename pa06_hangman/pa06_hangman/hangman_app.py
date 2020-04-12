@@ -7,7 +7,7 @@ words="These are some words that we can change later".split()
 
 def generate_random_word():
    """ read a list of words from a file and pick a random one to return """
-   return "random.choice(words)
+   return random.choice(words)
 
 def play_hangman():
     want_to_play = True
