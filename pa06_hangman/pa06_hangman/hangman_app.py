@@ -1,4 +1,5 @@
 """
+   Authors: Claire Rousell, Kayla Romero, Maya Rosenfeld, Helen Lin, Veronica Rojas
    hangman_app.py is an app for playing hangman in the terminal
    it is also used as a module in the hangman_webapp flask app
 """
