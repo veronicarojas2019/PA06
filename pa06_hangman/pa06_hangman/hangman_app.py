@@ -34,7 +34,7 @@ def play_hangman():
             if "all the letters in the word have been guessed":
                 done = True
                 print("Congratulations, you won!")
-            elif guesses_left=0:
+            elif guesses_left==0:
                 done = True
                 print("Sorry, you lost!")
             else:
