@@ -34,11 +34,15 @@ def hangman():
 
 	elif request.method == 'POST':
 		letter = request.form['guess']
-		# check if letter has already been guessed
-		# and generate a response to guess again
-		# else check if letter is in word
-		# then see if the word is complete
-		# if letter not in word, then tell them
+        if letter in guessed_letters:
+            print("You have already guessed this letter, guess again.")
+        else:
+            if letter in word:
+                print("Good guess, that letter is in the word!")
+                if done==True:
+                    print("The word is complete, you won!")
+            if letter not in word:
+                print("That letter is not in the word. Guess again.")
 		state['guesses'] += [letter]
 		return render_template('play.html',state=state)
 
