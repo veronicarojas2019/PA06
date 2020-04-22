@@ -39,7 +39,13 @@ def play_hangman():
                 print("Sorry, you lost!")
             else:
                 "print the word with a dash for each letter not in guessed_letters"
-                letter = input("Enter a letter: ")
+                 #this works but the spacing is bad
+                for i in range(len(word)):
+                     if(word[i] in guessed_letters):
+                         print(word[i])
+                     else:
+                         print('__')
+               letter = input("Enter a letter: ")
         want_to_play = input("Would you like to play another game? [Y]es or [N]o")
 
 
