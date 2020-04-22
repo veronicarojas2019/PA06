@@ -31,7 +31,7 @@ def play_hangman():
             else:
                 guessed_letters.append(letter)
                 print("The letter is in the word")
-            if "all the letters in the word have been guessed":
+            if quessed_letters==word.split():
                 done = True
                 print("Congratulations, you won!")
             elif guesses_left==0:
@@ -40,7 +40,8 @@ def play_hangman():
             else:
                 "print the word with a dash for each letter not in guessed_letters"
                 letter = input("Enter a letter: ")
-        want_to_play = "ask the user if they want to play another game..."
+        want_to_play = input("Would you like to play another game? [Y]es or [N]o")
+
 
 
 if __name__ == '__main__':
