@@ -16,6 +16,7 @@ def play_hangman():
 
     while (want_to_play):
         guessed_letters = []
+        correct_letters = []
         guesses_left = 6
         word = generate_random_word()
         letter = input("Enter a letter: ")
@@ -31,15 +32,13 @@ def play_hangman():
             else:
                 guessed_letters.append(letter)
                 print("The letter is in the word")
-            if quessed_letters==word.split():
+            if len(correct_letters) == len(word):
                 done = True
                 print("Congratulations, you won!")
             elif guesses_left==0:
                 done = True
                 print("Sorry, you lost!")
             else:
-                "print the word with a dash for each letter not in guessed_letters"
-                 #this works but the spacing is bad
                 for i in range(len(word)):
                      if(word[i] in guessed_letters):
                          print(word[i])
