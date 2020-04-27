@@ -1,11 +1,10 @@
- 
 """
    Authors: Claire Rousell, Kayla Romero, Maya Rosenfeld, Helen Lin, Veronica Rojas
    hangman_app.py is an app for playing hangman in the terminal
    it is also used as a module in the hangman_webapp flask app
 """
 import random
-words="These are some words that we can change later".split()
+words="apple tree ocean mountain example suspicious courage spite anonymous monologue".split()
 
 def generate_random_word():
    """ read a list of words from a file and pick a random one to return """
@@ -41,11 +40,11 @@ def play_hangman():
                 print("Sorry, you lost!")
             else:
                 for i in range(len(word)):
-                     if(word[i] in guessed_letters):
-                         print(word[i])
-                     else:
+                    if(word[i] in guessed_letters):
+                        print(word[i])
+                    else:
                          print('__')
-               letter = input("Enter a letter: ")
+                letter = input("Enter a letter: ")
         want_to_play = input("Would you like to play another game? [Y]es or [N]o")
 
 
