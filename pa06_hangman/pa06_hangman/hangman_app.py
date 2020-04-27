@@ -1,3 +1,4 @@
+ 
 """
    Authors: Claire Rousell, Kayla Romero, Maya Rosenfeld, Helen Lin, Veronica Rojas
    hangman_app.py is an app for playing hangman in the terminal
@@ -32,7 +33,7 @@ def play_hangman():
             else:
                 guessed_letters.append(letter)
                 print("The letter is in the word")
-            if len(correct_letters)==len(word):
+            if len(correct_letters) == len(word):
                 done = True
                 print("Congratulations, you won!")
             elif guesses_left==0:
@@ -44,7 +45,7 @@ def play_hangman():
                          print(word[i])
                      else:
                          print('__')
-                         letter = input("Enter a letter: ")
+               letter = input("Enter a letter: ")
         want_to_play = input("Would you like to play another game? [Y]es or [N]o")
 
 
