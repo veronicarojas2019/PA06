@@ -39,11 +39,13 @@ def play_hangman():
                 done = True
                 print("Sorry, you lost!")
             else:
+                output_string=""
                 for i in range(len(word)):
                     if(word[i] in guessed_letters):
-                        print(word[i])
+                        output_string+=word[i]+" "
                     else:
-                         print('__')
+                         output_string+='__ '
+                print(output_string)
                 letter = input("Enter a letter: ")
         want_to_play = input("Would you like to play another game? [Y]es or [N]o")
 
