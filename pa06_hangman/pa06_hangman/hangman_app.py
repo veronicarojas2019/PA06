@@ -4,7 +4,7 @@
    it is also used as a module in the hangman_webapp flask app
 """
 import random
-words="These are some words that we can change later".split()
+words="apple tree ocean mountain example suspicious courage spite anonymous monologue".split()
 
 def generate_random_word():
    """ read a list of words from a file and pick a random one to return """
@@ -32,19 +32,21 @@ def play_hangman():
             else:
                 guessed_letters.append(letter)
                 print("The letter is in the word")
-            if len(correct_letters)==len(word):
+            if len(correct_letters) == len(word):
                 done = True
                 print("Congratulations, you won!")
             elif guesses_left==0:
                 done = True
                 print("Sorry, you lost!")
             else:
+                output_string=""
                 for i in range(len(word)):
-                     if(word[i] in guessed_letters):
-                         print(word[i])
-                     else:
-                         print('__')
-                         letter = input("Enter a letter: ")
+                    if(word[i] in guessed_letters):
+                        output_string+=word[i]+" "
+                    else:
+                         output_string+='__ '
+                print(output_string)
+                letter = input("Enter a letter: ")
         want_to_play = input("Would you like to play another game? [Y]es or [N]o")
 
 
